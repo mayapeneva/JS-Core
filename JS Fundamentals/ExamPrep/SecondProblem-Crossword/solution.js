@@ -30,7 +30,6 @@ function solve() {
       let input = getInput();
       let command = getElement("sortSecondaryCmd");      
       let position = getElement("sortPosition");
-      console.log(command);
       
       let result = [];
       switch (command) {

@@ -3,7 +3,7 @@ function solve() {
   let resultElement = document.getElementById("result");
 
   let key = input[0];  
-  let generalPattern = new RegExp(`${key}[\\s]+([!%$#A-Z]+)(?=[\\s\\.\\,]|$)`, "gim");
+  let generalPattern = new RegExp(`${key}[\\s|^]+([!%$#A-Z]{8,})(?=[\\s\\.\\,]|$)`, "gim");
   let msgPattern = new RegExp("^[!%$#A-Z]{8,}$");
   for (let i = 1; i < input.length; i++) {
     let line = input[i];
