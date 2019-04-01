@@ -32,14 +32,3 @@ function calculate(input) {
         }        
     }
 }
-
-calculate(["Ferrari -> Kimi Raikonnen -> 25",
-    "Ferrari -> Sebastian Vettel -> 18",
-    "Mercedes -> Lewis Hamilton -> 10",
-    "Mercedes -> Valteri Bottas -> 8",
-    "Red Bull -> Max Verstapen -> 6",
-    "Red Bull -> Daniel Ricciardo -> 4",
-    "Mercedes -> Lewis Hamilton -> 25",
-    "Mercedes -> Valteri Bottas -> 18",
-    "Haas -> Romain Grosjean -> 25",
-    "Haas -> Kevin Magnussen -> 25"])
