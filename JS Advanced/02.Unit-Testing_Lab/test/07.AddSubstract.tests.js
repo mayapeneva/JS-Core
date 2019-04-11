@@ -109,11 +109,12 @@ describe("CreateCalculator", function(){
 
     it("Should return 1 if we add 2 and subtract 1", function () {
         let calculator = createCalculator();
+        let expected = 1;
 
         calculator.add(2);
         calculator.subtract(1)
         let actual = calculator.get();
 
-        assert.equal(actual, 1);
+        assert.equal(actual, expected);
     });
 });
