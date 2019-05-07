@@ -88,10 +88,10 @@ describe("Warehouse", function () {
         });
     
         it("Throws error when there is not enough space", function () {
-            warehouse = new Warehouse(1);
+            let quantity2 = 200;
     
             let actual = function () {
-                warehouse.addProduct(type, product, quantity);
+                warehouse.addProduct(type, product, quantity2);
             }
             
             assert.throws(actual, "There is not enough space or the warehouse is already full");
