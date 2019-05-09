@@ -27,5 +27,3 @@ function order(input) {
 
     return result.sort((a,b) => b.area() - a.area() || b.width - a.width);
 }
-
-console.log(order([[10,5], [3,20], [5,12]]));
