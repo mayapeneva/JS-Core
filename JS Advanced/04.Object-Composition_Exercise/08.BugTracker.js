@@ -28,7 +28,7 @@ function result () {
         },
     
         sort: function (method = "ID") {
-            if (method ==+ "author") {
+            if (method === "author") {
                 reports.sort((a,b) => a.author.localeCompare(b.author));
             } else {
                 reports.sort((a,b) => a[method] - b[method]);
