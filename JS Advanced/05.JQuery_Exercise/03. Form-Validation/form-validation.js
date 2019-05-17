@@ -22,15 +22,14 @@ function validate() {
 			valid = false;
 		}
 
-		let passwordRegex = /^[\w]{5,15}$/g;
 		let password = $("#password");
-		if (!passwordRegex.test(password.val())) {
+		if (!(/^[\w]{5,15}$/g.test(password.val()))) {
 			password.css("border-color", "red");
 			valid = false;
 		}
 
 		let confirmPassword = $("#confirm-password");
-		if (!passwordRegex.test(confirmPassword.val()))) {
+		if (!(/^[\w]{5,15}$/g.test(confirmPassword.val()))) {
 			confirmPassword.css("border-color", "red");
 			valid = false;
 		}

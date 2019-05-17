@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>List of Items</h1>
+<ul id="items"><li>First</li><li>Second</li></ul>
+<input type="text" id="newItemText" />
+<input type="button" value="Add" onclick="addItem()">
+<script>
+  function addItem() {
+    let text = $("#newItemText").val();
+    let $li = $("<li>");
+    $li.text(text);
+
+    let $button = $("<button>");
+    $button.text("Delete");
+    $button.click(onButtonDeleteClick);
+    $li.append($button);
+
+    $("#items").append($li);
+
+    function onButtonDeleteClick(event) {
+      event.target.parentNode.remove();
+    }
+  }
+</script>
+<script
+src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+crossorigin="anonymous">
+</script>
+</body>
+</html>
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8"><title>Focus</title>
+  <style>.error { border: 2px solid red; }</style>
+</head>
+<body onload="validate()">
+  <label for="email">Enter email:</label>
+  <input id="email" type="text"/>
+  <script>
+    function validate() {
+      let $input = $("#email");
+      $input.change(validate);
+
+      function validate() {
+        let email = $input.val();
+        let regex = /^[a-z]+@[a-z]+.[a-z]+$/g;
+        if (!regex.test(email)) {            
+            $input.addClass("error");
+        } else {
+            $input.removeClass("error");
+        }
+      }
+    }
+  </script>
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+  </script> 
+</body>
+</html>
